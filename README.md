@@ -1,4 +1,4 @@
-# NYC Motor Vehicle Collisions
+# NYC Motor Vehicle Collisions Exploratory Data Analysis and Visualization
 
 
 ## Data Source - NYC Open Data
