@@ -1,112 +1,36 @@
-# NYC Vehicle Crash Analysis
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This project is an analysis of NYC vehicle crash data, focusing on the trend of crashes over time. Using Python and powerful data visualization libraries, this project aims to uncover patterns in crash occurrences and identify key insights.
+## Getting Started
 
-## Project Overview
+First, run the development server:
 
-### Objective
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-The primary goal of this project is to analyze the trend of vehicle crashes in New York City over time using historical crash data.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Data Source
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-The analysis is conducted using the NYC [Motor Vehicle Collisions - Crashes](https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data) dataset, which includes detailed records of crashes reported in NYC. The dataset provides information such as:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- Crash date and time
-- Borough
-- Location (latitude/longitude)
-- Number of injuries and fatalities
+## Learn More
 
-## Key Features
+To learn more about Next.js, take a look at the following resources:
 
-- **Data Cleaning:**
-  - Handled missing and inconsistent data.
-  - Formatted date and time fields for temporal analysis.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **Data Analysis:**
-  - Analyzed crash trends over time (daily, monthly, yearly).
-  - Grouped data by weekdays and boroughs to identify patterns.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- **Visualization:**
-  - Line plots to show crash trends over time.
-  - Heatmaps to identify crash density by time and location.
-  - KDE plots to visualize crash occurrence patterns.
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Technologies Used
-
-- **Programming Language:** Python
-- **Libraries:**
-  - Pandas: Data manipulation and analysis.
-  - Seaborn & Matplotlib: Data visualization.
-
-
-## How to Run the Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ragibasif/NYC-mvc-crashes
-   ```
-
-2. Create a virtual environment:
-    ```bash
-   python3 -m venv venv
-    ```
-
-3. Activate the virtual environment:
-    ```bash
-    source venv/bin/activate
-    ```
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Start the notebook script:
-   ```bash
-    jupyter notebook
-   ```
-
-6. Deactivate virtual environment:
-   ```bash
-    deactivate
-   ```
----
-
-## Example Visualizations
-
-Below are some examples of the visualizations produced:
-
-- **Line Plot of Crashes Over Time:**
-  A time series plot showing the trend of crashes.
-
-- **Heatmap of Crash Counts by Day and Hour:**
-  A heatmap highlighting hours with higher crash occurrences.
-
-
-## Insights Gained
-
-- Temporal patterns in crash occurrences, such as peaks on specific days or times.
-- Borough-specific trends, highlighting areas with consistently high crash rates.
-
-
-## Future Work
-
-- Incorporate more granular location data for neighborhood-level analysis.
-- Explore external factors (e.g., weather conditions, traffic patterns).
-- Predict future trends using machine learning.
-
-
-## Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue for suggestions and improvements.
-
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-## Acknowledgments
-
-Thanks to the NYC Open Data portal for providing the dataset used in this analysis.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
