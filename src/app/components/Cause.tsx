@@ -1,8 +1,19 @@
-export default function About() {
+import Image from "next/image";
+export default function Cause() {
+  const WIDTH: number = 360;
+  const HEIGHT: number = 360;
+
   return (
     <div>
-    <h1>NYC Motor Vehicle Collisions Exploratory Data Analysis and Visualization</h1>
-    <p>Utilized traffic collision data from NYC Open Data to analyze and visualize traffic collisions in New York City between 07/01/2012 to 01/20/2025. The total number of crashes analyzed is 2,150,966.</p>
+      <h1>Cause</h1>
+      <Image
+        className="dark:invert"
+        src="/plots/crash_count_top_contributing_factors_barplot.png"
+        alt="Borough"
+        width={WIDTH}
+        height={HEIGHT}
+        priority
+      />
     </div>
   );
 }
