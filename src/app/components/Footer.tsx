@@ -1,7 +1,14 @@
 import Image from "next/image";
 
+interface SocialProps {
+  url: string;
+  name: string;
+  icon: string;
+  iconAlt: string;
+};
+
 // export default
-function Socials({ url, name, icon, iconAlt }) {
+function Socials({ url, name, icon, iconAlt }: SocialProps) {
   return (
     <>
       <a
