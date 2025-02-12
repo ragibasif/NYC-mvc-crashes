@@ -13,10 +13,35 @@ function Socials(url, name, icon, iconAlt) {
     </div>
   );
 }
+class Link {
+  linkClassName = "";
+  linkID = "";
+  constructor(linkURL, linkName, linkID, linkClassName) {
+    this.linkURL = linkURL;
+    this.linkName = linkName;
+    this.linkID = linkID;
+    this.linkClassName = linkClassName;
+  }
+}
+
+class Icon extends Link {
+  constructor(
+    linkURL,
+    linkName,
+    linkID,
+    linkClassName,
+    linkIconSrc,
+    linkIconAlt
+  ) {
+    super(linkURL, linkName, linkID, linkClassName);
+    this.linkIconSrc = linkIconSrc;
+    this.linkIconAlt = linkIconAlt;
+  }
+}
 
 function Footer() {
-  const name= "Ragib Asif";
-  const year= new Date().getFullYear();
+  const name = "Ragib Asif";
+  const year = new Date().getFullYear();
   const linkedInLink = "https://www.linkedin.com/in/ragibasif/";
   const gitHubLink = "https://github.com/ragibasif";
   const nycOpenDataLink =
@@ -63,4 +88,3 @@ function Footer() {
     </>
   );
 }
-
