@@ -1,37 +1,27 @@
-import Image from "next/image";
-
-interface SocialProps {
-  url: string;
-  name: string;
-  icon: string;
-  iconAlt: string;
-};
-
-// export default
-function Socials({ url, name, icon, iconAlt }: SocialProps) {
+function Socials(url, name, icon, iconAlt) {
   return (
-    <>
+    <div>
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href={url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image aria-hidden src={icon} alt={iconAlt} width={16} height={16} />
+        <img src={icon} alt={iconAlt} width={16} height={16} />
         {name}
       </a>
-    </>
+    </div>
   );
 }
 
-export default function Footer() {
-  const name: string = "Ragib Asif";
-  const year: number = new Date().getFullYear();
-  const linkedInLink: string = "https://www.linkedin.com/in/ragibasif/";
-  const gitHubLink: string = "https://github.com/ragibasif";
-  const nycOpenDataLink: string =
+function Footer() {
+  const name= "Ragib Asif";
+  const year= new Date().getFullYear();
+  const linkedInLink = "https://www.linkedin.com/in/ragibasif/";
+  const gitHubLink = "https://github.com/ragibasif";
+  const nycOpenDataLink =
     "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data";
-  const emailLink: string = "mailto:ragib.asif30@myhunter.cuny.edu";
+  const emailLink = "mailto:ragib.asif30@myhunter.cuny.edu";
   return (
     <>
       <Socials
@@ -73,3 +63,4 @@ export default function Footer() {
     </>
   );
 }
+
