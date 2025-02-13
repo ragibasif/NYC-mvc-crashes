@@ -1,10 +1,144 @@
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #283618;
+  --accent: #606c38;
+  --text: #fefae0;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--accent);
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+/* Main Content Styles */
+main {
+  padding: 1.5rem;
+}
+
+/* Section Styles */
+.analysis-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Image Container Styles */
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.plot {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--accent);
+  border-radius: 0.35rem;
+  box-shadow: 0 2px 4px var(--accent);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); */
+}
+
+/* Footer Styles */
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--accent);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#footer-container a {
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+#footer-container a:hover {
+  text-decoration: overline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plot {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .section-header {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
 }

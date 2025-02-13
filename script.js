@@ -1,45 +1,27 @@
-function Socials(url, name, icon, iconAlt) {
-  return (
-    <div>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={icon} alt={iconAlt} width={16} height={16} />
-        {name}
-      </a>
-    </div>
-  );
-}
-class Link {
-  linkClassName = "";
-  linkID = "";
-  constructor(linkURL, linkName, linkID, linkClassName) {
-    this.linkURL = linkURL;
-    this.linkName = linkName;
-    this.linkID = linkID;
-    this.linkClassName = linkClassName;
-  }
+// Function to create a social link element
+function createLink(url, name, icon, iconAlt) {
+  const linkContainer = document.createElement("div");
+
+  const linkIcon = document.createElement("img");
+  linkIcon.src = icon;
+  linkIcon.alt = iconAlt;
+  linkIcon.width = 16;
+  linkIcon.height = 16;
+
+  const linkSrc = document.createElement("a");
+  linkSrc.href = url;
+  linkSrc.target = "_blank";
+  linkSrc.rel = "noopener noreferrer";
+  linkSrc.innerHTML = `${name}`;
+
+  linkSrc.appendChild(linkIcon);
+  linkContainer.appendChild(linkSrc);
+
+  return linkContainer;
 }
 
-class Icon extends Link {
-  constructor(
-    linkURL,
-    linkName,
-    linkID,
-    linkClassName,
-    linkIconSrc,
-    linkIconAlt
-  ) {
-    super(linkURL, linkName, linkID, linkClassName);
-    this.linkIconSrc = linkIconSrc;
-    this.linkIconAlt = linkIconAlt;
-  }
-}
-
-function Footer() {
+// Function to create the footer
+function createFooter() {
   const name = "Ragib Asif";
   const year = new Date().getFullYear();
   const linkedInLink = "https://www.linkedin.com/in/ragibasif/";
@@ -47,44 +29,43 @@ function Footer() {
   const nycOpenDataLink =
     "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data";
   const emailLink = "mailto:ragib.asif30@myhunter.cuny.edu";
-  return (
-    <>
-      <Socials
-        name="LinkedIn"
-        url={linkedInLink}
-        icon="/linkedin.svg"
-        iconAlt="LinkedIn logo"
-      />
-      <Socials
-        name="GitHub"
-        url={gitHubLink}
-        icon="/github.svg"
-        iconAlt="GitHub logo"
-      />
-      <Socials
-        name="Email"
-        url={emailLink}
-        icon="/envelope.svg"
-        iconAlt="Envelope icon"
-      />
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href={nycOpenDataLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          aria-hidden
-          src="/globe.svg"
-          alt="Globe icon"
-          width={16}
-          height={16}
-        />
-        Go to NYC Open Data →
-      </a>
-      <p>
-        &copy; {year} {name}. All rights reserved.
-      </p>
-    </>
+
+  const footer = document.getElementById("footer-container");
+
+  // Add LinkedIn social link
+  footer.appendChild(
+    createLink(
+      linkedInLink,
+      "LinkedIn",
+      "/public/linkedin.svg",
+      "LinkedIn logo"
+    )
   );
+
+  // Add GitHub social link
+  footer.appendChild(
+    createLink(gitHubLink, "GitHub", "/public/github.svg", "GitHub logo")
+  );
+
+  // Add Email social link
+  footer.appendChild(
+    createLink(emailLink, "Email", "/public/envelope.svg", "Envelope icon")
+  );
+
+  footer.appendChild(
+    createLink(
+      nycOpenDataLink,
+      "Go to NYC Open Data →",
+      "/public/globe.svg",
+      "Globe icon"
+    )
+  );
+  const copyrightText = document.createElement("p");
+  copyrightText.innerText = `© ${year} ${name}. All rights reserved.`;
+  footer.appendChild(copyrightText);
+
+  return footer;
 }
+
+// Append the footer to the body
+document.body.appendChild(createFooter());

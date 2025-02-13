@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>NYC Car Crashes</title>
+    <title>NYC Car Crashes Analysis</title>
   </head>
   <body>
     <header>
-      <div>
+      <div class="header-content">
         <h1>
-          NYC Motor Vehicle Collisions Exploratory Data Analysis and
+          NYC Motor Vehicle Collisions: Exploratory Data Analysis and
           Visualization
         </h1>
         <p>
@@ -21,80 +21,96 @@
         </p>
       </div>
     </header>
+
     <main>
-      <section>
+      <!-- Contributing Factors Section -->
+      <section class="analysis-section">
         <h2 class="section-header">Contributing Factors</h2>
-        <div>
-          <p class="description">
-            Top 10 Contributing Factors are driver inattention/distraction,
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            consectetur incidunt, cupiditate at asperiores sed deleniti quo,
-            iure hic temporibus earum inventore mollitia voluptate voluptas
-            accusamus unde, rerum maiores expedita?
-          </p>
+        <p class="description">
+        </p>
+        <div class="img-container">
           <img
             src="/public/plots/crash_count_top_contributing_factors_barplot.png"
-            alt="Borough"
+            alt="Top Contributing Factors Bar Plot"
             class="plot"
           />
         </div>
       </section>
-      <div>
-        <h1>Location</h1>
-        <img
-          src="/public/plots/crash_count_per_borough_barplot.png"
-          alt="Borough"
-        />
-        <img
-          src="/public/plots/crash_count_top_streets_barplot.png"
-          alt="top streets"
-        />
-      </div>
-      <div>
-        <h1>Time</h1>
-        <img
-          src="/public/plots/crash_count_by_day_of_week_barplot.png"
-          alt="Borough"
-        />
-        <img
-          src="/public/plots/crash_count_by_hour_of_day_barplot.png"
-          alt="top streets"
-        />
-        <img
-          src="/public/plots/crash_count_by_weekday_and_hour_of_day_boxplot.png"
-          alt="top streets"
-        />
-        <img
-          src="/public/plots/crash_count_by_weekday_and_hours_heatmap.png"
-          alt="top streets"
-        />
-        <img
-          src="/public/plots/crash_count_over_time_lineplot.png"
-          alt="top streets"
-        />
-        <img
-          src="/public/plots/crash_count_over_time_lmplot.png"
-          alt="top streets"
-        />
-        <img
-          src="/public/plots/crash_count_over_time_scatterplot.png"
-          alt="top streets"
-        />
-      </div>
 
-      <div>
-        <h1>Results</h1>
-        <img
-          src="/public/plots/fatalities_by_borough_barplot.png"
-          alt="Borough"
-        />
-        <img
-          src="/public/plots/injuries_by_borough_barplot.png"
-          alt="top streets"
-        />
-      </div>
+      <!-- Location Section -->
+      <section class="analysis-section">
+        <h2 class="section-header">Location</h2>
+        <div class="img-container">
+          <img
+            src="/public/plots/crash_count_per_borough_barplot.png"
+            alt="Crash Count per Borough Bar Plot"
+            class="plot"
+          />
+        </div>
+      </section>
+
+      <!-- Time Section -->
+      <section class="analysis-section">
+        <h2 class="section-header">Time</h2>
+        <div class="img-container">
+          <img
+            src="/public/plots/crash_count_by_day_of_week_barplot.png"
+            alt="Crash Count by Day of Week Bar Plot"
+            class="plot"
+          />
+          <img
+            src="/public/plots/crash_count_by_hour_of_day_barplot.png"
+            alt="Crash Count by Hour of Day Bar Plot"
+            class="plot"
+          />
+          <img
+            src="/public/plots/crash_count_by_weekday_and_hour_of_day_boxplot.png"
+            alt="Crash Count by Weekday and Hour of Day Box Plot"
+            class="plot"
+          />
+          <img
+            src="/public/plots/crash_count_by_weekday_and_hours_heatmap.png"
+            alt="Crash Count by Weekday and Hours Heatmap"
+            class="plot"
+          />
+          <!-- <img
+            src="/public/plots/crash_count_over_time_lineplot.png"
+            alt="Crash Count Over Time Line Plot"
+            class="plot"
+          />
+          <img
+            src="/public/plots/crash_count_over_time_lmplot.png"
+            alt="Crash Count Over Time Linear Model Plot"
+            class="plot"
+          /> -->
+          <img
+            src="/public/plots/crash_count_over_time_scatterplot.png"
+            alt="Crash Count Over Time Scatter Plot"
+            class="plot"
+          />
+        </div>
+      </section>
+
+      <!-- Results Section -->
+      <section class="analysis-section">
+        <h2 class="section-header">Results</h2>
+        <div class="img-container">
+          <img
+            src="/public/plots/fatalities_by_borough_barplot.png"
+            alt="Fatalities by Borough Bar Plot"
+            class="plot"
+          />
+          <img
+            src="/public/plots/injuries_by_borough_barplot.png"
+            alt="Injuries by Borough Bar Plot"
+            class="plot"
+          />
+        </div>
+      </section>
     </main>
-    <footer></footer>
+
+    <footer id="footer-container"></footer>
+
     <script src="/script.js"></script>
   </body>
 </html>
