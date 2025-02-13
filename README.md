@@ -38,11 +38,11 @@ The analysis is conducted using the NYC [Motor Vehicle Collisions - Crashes](htt
 
 ## Technologies Used
 
-- **Programming Languages:** Python, JavaScript, HTML/CSS
+- **Programming Language:** Python
+- **Web Technologies:** JavaScript, HTML/CSS
 - **Libraries:**
   - Pandas: Data manipulation and analysis.
   - Seaborn & Matplotlib: Data visualization.
-
 
 ## Example Visualizations
 
