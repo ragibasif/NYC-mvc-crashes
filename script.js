@@ -37,26 +37,26 @@ function createFooter() {
     createLink(
       linkedInLink,
       "LinkedIn",
-      "./assets/linkedin.svg",
+      "/assets/linkedin.svg",
       "LinkedIn logo"
     )
   );
 
   // Add GitHub social link
   footer.appendChild(
-    createLink(gitHubLink, "GitHub", "./assets/github.svg", "GitHub logo")
+    createLink(gitHubLink, "GitHub", "/assets/github.svg", "GitHub logo")
   );
 
   // Add Email social link
   footer.appendChild(
-    createLink(emailLink, "Email", "./assets/envelope.svg", "Envelope icon")
+    createLink(emailLink, "Email", "/assets/envelope.svg", "Envelope icon")
   );
 
   footer.appendChild(
     createLink(
       nycOpenDataLink,
       "Go to NYC Open Data →",
-      "./assets/globe.svg",
+      "/assets/globe.svg",
       "Globe icon"
     )
   );
