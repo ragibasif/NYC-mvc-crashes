@@ -1,8 +1,5 @@
 # NYC Vehicle Crash Analysis
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5db35742-1c15-46d0-ab3f-86bcb404fd00/deploy-status)](https://app.netlify.com/sites/nyc-car-crashes/deploys)
-
-
 This project is an analysis of NYC vehicle crash data, focusing on the trend of crashes over time. Using Python and powerful data visualization libraries, this project aims to uncover patterns in crash occurrences and identify key insights.
 
 ## Project Overview
