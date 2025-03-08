@@ -27,7 +27,7 @@ function createFooter() {
   const linkedInLink = "https://www.linkedin.com/in/ragibasif/";
   const gitHubLink = "https://github.com/ragibasif";
   const nycOpenDataLink =
-    "https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data";
+    "https://data.cityofnewyork.us./assets-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95/about_data";
   const emailLink = "mailto:ragib.asif30@myhunter.cuny.edu";
 
   const footer = document.getElementById("footer-container");
@@ -37,26 +37,26 @@ function createFooter() {
     createLink(
       linkedInLink,
       "LinkedIn",
-      "/public/linkedin.svg",
+      "./assets/linkedin.svg",
       "LinkedIn logo"
     )
   );
 
   // Add GitHub social link
   footer.appendChild(
-    createLink(gitHubLink, "GitHub", "/public/github.svg", "GitHub logo")
+    createLink(gitHubLink, "GitHub", "./assets/github.svg", "GitHub logo")
   );
 
   // Add Email social link
   footer.appendChild(
-    createLink(emailLink, "Email", "/public/envelope.svg", "Envelope icon")
+    createLink(emailLink, "Email", "./assets/envelope.svg", "Envelope icon")
   );
 
   footer.appendChild(
     createLink(
       nycOpenDataLink,
       "Go to NYC Open Data →",
-      "/public/globe.svg",
+      "./assets/globe.svg",
       "Globe icon"
     )
   );
